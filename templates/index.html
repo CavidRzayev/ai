@@ -1,0 +1,265 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ABB AI Factory</title>
+  <meta name="description" content="">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<style>
+    .voffset  { margin-top: 2px; }
+.voffset1 { margin-top: 5px; }
+.voffset2 { margin-top: 10px; }
+.voffset5 { margin-top: 15px; }
+.voffset5 { margin-top: 40px; }
+.voffset6 { margin-top: 60px; }
+.voffset7 { margin-top: 80px; }
+.voffset8 { margin-top: 100px; }
+.voffset9 { margin-top: 250px; }
+.navbar-brand {
+  padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: var(--bs-navbar-brand-padding-y);
+  margin-right: var(--bs-navbar-brand-margin-end);
+  font-size: var(--bs-navbar-brand-font-size);
+  color: #f8f9fa;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.x {
+  --bs-bg-opacity: 1;
+  background-color: transparent;
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+  color: #f8f9fa;
+}
+.special-card {
+/* create a custom class so you 
+ do not run into specificity issues 
+ against bootstraps styles
+ which tends to work better than using !important 
+ (future you will thank you later)*/
+
+background-color: rgba(245, 245, 245, 1);
+opacity: .4;
+}
+a {
+  color: #141619;
+  text-decoration: auto;
+}
+.card {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: #f5faff;
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
+.card-img, .card-img-bottom, .card-img-top {
+    width: 50%;
+}
+</style>
+<div id="particles-js"></div>
+<body style="margin: 0; height: 100%; overflow: hidden">
+<!-- <div id="particles-js"></div> -->
+
+ 
+  <nav class="navbar navbar-expand-lg navbar-light x" style="left: 30px;">
+    <a class="navbar-brand" href="#"><img src="{% static 'logo/logo.png' %}" width="180" height="80" class="d-inline-block align-top" alt=""></a>
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="container">
+    <div class="collapse navbar-collapse "style="justify-content: flex-end!important;" id="navbarNavAltMarkup">
+      
+      <div class="navbar-nav my-2 " >
+        
+        <a class="nav-item nav-link active " href="#">NEWS</a>
+        <a class="nav-item nav-link active " href="{% url 'docs' %}">DOCS</a>
+        <a class="nav-item nav-link active " href="#">BLOG</a>
+
+        
+      </div>
+    </div>
+  </div>
+  </nav>
+  
+  <div class="container">
+
+    <div class="row">
+        <div class="card"  style="background-color: transparent; --bs-card-border-color: transparent;">
+              <h5 class="card-title text-center" style="color:white ; font-size:70px" >AI Factory </h5>
+          </div>
+          <div class="card"  style="background-color: transparent; --bs-card-border-color: transparent;">
+            <h5 class="card-title text-center" style="color:white ; font-size:18px" >Unified and interactive Big Data and AI governance suite </h5>
+        </div>
+        
+        
+          <a href="{% url 'mlcatalog' %}" class="card-link"><div class="col-md-2 voffset7 d-flex ">
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;">
+              <img class="card-img-top" src="{% static 'images/mlcatalog.png' %}" alt="Card image cap">
+              <h5 class="card-title text-center">ML Catalog </h5><hr>
+              <p class="card-text text-center" style="font-size: 13px;"> Catalog including details of developed AI use cases and ML Models as well as list of possible use cases</p>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="col-sm-2 voffset7 d-flex d-flex"  >
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;     background-color: #c1c9d2;">
+              <img class="card-img-top" src="{% static 'images/featurestore.png' %}" alt="Card image cap">
+              <a href="" class="card-link"><h5 class="card-title text-center">Feature Catalog</h5></a><hr>
+              <p class="card-text text-center" style="font-size: 13px;" >Centralized and production ready machine learning feature store </p>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-sm-2 voffset7 d-flex d-flex">
+            <a href="http://172.31.3.30:8000/hub/login" class="card-link">
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;">
+              <img class="card-img-top" src="{% static 'images/mlcode (1).png' %}" alt="Card image cap">
+              <h5 class="card-title text-center">ML Code</h5><hr>
+              <p class="card-text text-center" style="font-size: 13px;">Interactive development environment for notebooks, code, and data pipelines</p>
+            </div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="col-sm-2 voffset7 d-flex d-flex" >
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;">
+              <img class="card-img-top" src="{% static 'images/mlwatch.png' %}" alt="Card image cap">
+              <a href="" class="card-link"><h5 class="card-title text-center">ML Watch</h5></a><hr>
+              <p class="card-text text-center" style="font-size: 13px;"> End to end Machine Learning Lifecycle tracking tool</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 voffset7 d-flex d-flex">
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;     background-color: #c1c9d2;">
+              <img class="card-img-top" src="{% static 'images/3753859.png' %}" alt="Card image cap">
+
+              <a href="" class="card-link"><h5 class="card-title text-center">Impact Tracker</h5></a><hr>
+              <p class="card-text text-center" style="font-size: 13px;"> Tool to measure and monitor the monetary impact of AI use cases</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 voffset7 d-flex" >
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;     background-color: #c1c9d2;">
+              <img class="card-img-top" src="{% static 'images/bigsql.png' %}" alt="Card image cap">
+              <a href="" class="card-link"><h5 class="card-title text-center">Big SQL </h5></a><hr>
+              <p class="card-text text-center" style="font-size: 13px;"> Interactive environment to query data stored on Big Store</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 voffset5 d-flex">
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;">
+              <img class="card-img-top" src="{% static 'images/mlexplain.png' %}" alt="Card image cap">
+              <a href="" class="card-link"><h5 class="card-title text-center">ML Explainer</h5></a><hr>
+              <p class="card-text text-center" style="font-size: 13px;"> Tool to deep dive into mechanics of ML Models including feature importance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 voffset5 d-flex" >
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center; background-color: #c1c9d2;">
+              <img class="card-img-top" src="{% static 'images/mldeploy.png' %}" alt="Card image cap">
+              <a href="" class="card-link"><h5 class="card-title text-center">ML Deploy </h5></a><hr>
+              <p class="card-text text-center" style="font-size: 13px;">Deploy ML models with API end-points without coding</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 voffset5 d-flex" >
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;">
+              <img class="card-img-top" src="{% static 'images/orchestr.png' %}" alt="Card image cap">
+              <a href="" class="card-link"><h5 class="card-title text-center">ML Orchestrate</h5></a>
+              <hr>
+              <p class="card-text text-center" style="font-size: 13px;"> Automate, schedule and monitor ML workflows and data pipelines</p>
+            </div>
+          </div>
+        </div>
+       
+        <div class="col-sm-2 voffset5 d-flex">
+            
+          <div class="card">
+            <a href="https://minio.ibar.az/login" class="card-link">
+            <div class="card-body flex-fill" style="    text-align: center;">
+              <img class="card-img-top" src="{% static 'images/bigdatastorage2.png' %}" alt="Card image cap">
+              <h5 class="card-title text-center">Big Store              </h5><hr>
+              <p class="card-text text-center" style="font-size: 13px;">   Store structured and unstructured data on a single storage</p>
+            </div>
+        </a>
+          </div>
+       
+        </div>
+        <div class="col-sm-2 voffset5 d-flex" >
+            
+          <div class="card">
+            <a href="http://172.31.3.30:8080/nifi" class="card-link">
+            <div class="card-body flex-fill" style="    text-align: center;">
+              <img class="card-img-top" src="{% static 'images/dataprocessing.png' %}" alt="Card image cap">
+              <h5 class="card-title text-center">Data Transport</h5><hr>
+              <p class="card-text text-center" style="font-size: 13px;"> Transform / Load data between Big Store and other data stores.</p>
+            </div>
+        </a>
+          </div>
+        </div>
+        <div class="col-sm-2 voffset5 d-flex">
+          <div class="card">
+            <div class="card-body flex-fill" style="    text-align: center;    background-color: #c1c9d2;">
+              <img class="card-img-top" src="{% static 'images/airobot.png' %}" alt="Card image cap">
+              <a href="" class="card-link"><h5 class="card-title text-center">AI Robot</h5></a><hr>
+              <p class="card-text text-center" style="font-size: 13px;"> No-Code ML Model creation environment to democratize data</p>
+            </div>
+          </div>
+        </div>
+        
+    
+    </div>
+  </div>
+  <!-- particles.js container -->
+  
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="{% static 'js/particles.min.js' %}"></script>
+  <script src="{% static 'js/deepMerge.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
